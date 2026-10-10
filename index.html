@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>おにぎり屋ひとにぎり</title>
+</head>
+<body>
+  <header>
+        <!-- メインビジュアル -->
+    <figcaption class="main_visual">
+      <img src="./img/bgimg_blueSky.jpg" alt="青空" class="main_visual_img">
+      <p class="main_visual_text">遠い昔から親しまれ続ける<br>
+        日本の伝統料理「おにぎり」<br>
+        丹精込めて作りました。</p>
+    </figcaption>
+
+    <figure>
+      <div class="visual_items">
+        <img class="visual_item" src="./img/img_tenMusu.jpg" alt="天むす">
+        <img class="visual_item item_center" src="./img/img_sisitoMIso.jpg" alt="ししとう味噌">
+        <img class="visual_item" src="./img/img_salt01.jpg" alt="しおむすび">
+      </div>
+    </figure>
+    <img src="./img/logo.png" alt="ロゴPC" class="logo_PC">
+    <img src="./img/logo_SP.png" alt="ロゴSP" class="logo_SP">
+
+  </header>
+
+  <main>
+    <!-- 注文アイテム -->
+    <section class="order">
+      <figure class="order_item">
+        <img src="./img/img_asariYaki.png" alt="あさり焼き" class="asari">
+        <div class="siomusubi_wrap">
+          <div>
+            <img src="./img/img_salt01.jpg" alt="しおむすび" class="siomusubi">
+            <p class="siomusubi_text">並ばずに<br>受け取れます！</p>
+          </div>
+          <p class="siomusubi_text_white">モバイルオーダー<br>はじめました</p>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ボタン -->
+    <button class="cta_btn" id="openModal">
+      <img src="./img/cta_btn_pc.png" alt="PCオーダーボタン" class="pc_btn open-modal">
+      <img src="./img/cta_btn_sp.png" alt="SPオーダーボタン" class="sp_btn open-modal">
+    </button>
+    <!-- モーダルウィンドウ -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="closeModal" class="close">&times;</span>
+          <div class="Customer textBox">
+            <dl>
+              <dt>メールアドレス</dt>
+              <dd><input type="email" name="email" required></dd>
+              <dt>お名前</dt>
+              <dd><input type="text" name="name" required></dd>
+              <dt>電話番号</dt>
+              <dd><input type="tel" name="phone" required></dd>
+            </dl>
+          </div>
+          <div class="Address textBox">
+            <dl>
+              <dt>郵便番号</dt>
+              <dd><input type="text" inputmode="numeric" pattern="\d{3}-?\d{4}" required></dd>
+              <dt>都道府県</dt>
+              <dd><select name="pref">
+                    <option value="selected">選択してください</option>
+                    <option value="北海道">北海道</option>
+                    <option value="青森県">青森県</option>
+                    <option value="岩手県">岩手県</option>
+                    <option value="宮城県">宮城県</option>
+                    <option value="秋田県">秋田県</option>
+                    <option value="山形県">山形県</option>
+                    <option value="福島県">福島県</option>
+                    <option value="茨城県">茨城県</option>
+                    <option value="栃木県">栃木県</option>
+                    <option value="群馬県">群馬県</option>
+                    <option value="埼玉県">埼玉県</option>
+                    <option value="千葉県">千葉県</option>
+                    <option value="東京都">東京都</option>
+                    <option value="神奈川県">神奈川県</option>
+                    <option value="新潟県">新潟県</option>
+                    <option value="富山県">富山県</option>
+                    <option value="石川県">石川県</option>
+                    <option value="福井県">福井県</option>
+                    <option value="山梨県">山梨県</option>
+                    <option value="長野県">長野県</option>
+                    <option value="岐阜県">岐阜県</option>
+                    <option value="静岡県">静岡県</option>
+                    <option value="愛知県">愛知県</option>
+                    <option value="三重県">三重県</option>
+                    <option value="滋賀県">滋賀県</option>
+                    <option value="京都府">京都府</option>
+                    <option value="大阪府">大阪府</option>
+                    <option value="兵庫県">兵庫県</option>
+                    <option value="奈良県">奈良県</option>
+                    <option value="和歌山県">和歌山県</option>
+                    <option value="鳥取県">鳥取県</option>
+                    <option value="島根県">島根県</option>
+                    <option value="岡山県">岡山県</option>
+                    <option value="広島県">広島県</option>
+                    <option value="山口県">山口県</option>
+                    <option value="徳島県">徳島県</option>
+                    <option value="香川県">香川県</option>
+                    <option value="愛媛県">愛媛県</option>
+                    <option value="高知県">高知県</option>
+                    <option value="福岡県">福岡県</option>
+                    <option value="佐賀県">佐賀県</option>
+                    <option value="長崎県">長崎県</option>
+                    <option value="熊本県">熊本県</option>
+                    <option value="大分県">大分県</option>
+                    <option value="宮崎県">宮崎県</option>
+                    <option value="鹿児島県">鹿児島県</option>
+                    <option value="沖縄県">沖縄県</option>
+                    </select></dd>
+              <dt>市区町村</dt>
+              <dd><input type="text" id="city" name="city" autocomplete="address-level2"></dd>
+              <dt>番地</dt>
+              <dd><input type="text" name="address" required></dd>
+              <dt>建物名</dt>
+              <dd><input type="text" name="building"></dd>
+            </dl>
+          </div>
+          <div class="Menu textBox">
+            <div class="Menu_list">
+              <p >塩むすび</p>
+              <p class="Menu_item"><input type="number" name="salt_knot" min="0">個</p>
+              <p >焼きおにぎり（味噌）</p>
+              <p class="Menu_item"><input type="number" name="grilled_onigiri" min="0">個</p>
+              <p>焼きおにぎり（あさり）</p>
+              <p class="Menu_item"><input type="number" name="grilled_onigiri_clam" min="0">個</p>
+              <p>焼きおにぎり（ししとう）</p>
+              <p class="Menu_item"><input type="number" name="grilled_onigiri_shishito" min="0">個</p>
+            </div>
+          </div>
+          <div class="submit">
+            <input type="submit" value="注文送信" class="submit_btn">
+          </div>
+          </div>
+    </div>
+
+
+    <!-- こだわり -->
+    <section class="concept" id="concept">
+      <h2 class="concept_title">こだわり</h2>
+      <div class="concept_wrap">
+        <div class="consept_text">
+          <p>お母さんやお父さんが握ってくれたおにぎり<span class="br"><br></span>
+            思い出してみると、何か特別なことをしているわけではないのに、<span class="br"><br></span>
+            なぜだか美味しいと感じた思い出はありませんか？
+          </p>
+          <br>
+          <p>ひとにぎりでは、そんな大切な誰かが作ってくれたおにぎりを、<span class="br"><br></span>
+            再現できるように手作りにこだわっています。
+          </p>
+        </div>
+        <figure><img class="shiogoma" src="./img/img_salt02.jpg" alt="塩ごまむすび"></figure>
+      </div>
+    </section>
+
+    <!-- キャンペーン -->
+    <section class="campaign" id="campaign">
+      <div class="campaign_wrap">
+        <figure><img class="takana" src="./img/img_takana.jpg" alt="高菜おにぎり"></figure>
+        <caption>
+          <p class="campaign_text">
+            <span class="font28_16">ただいま公式Xにて</span><br>
+            <span class="font32_20"><span class="marker"> 該当のポストのリポスト&フォローで</span><br>
+            <span class="red">100円割引クーポン</span>が当たる<span class="br"><br></span>
+            キャンペーン実施中!!</span>
+          </p>
+        </caption>
+      </div>
+      <figure class="icon"><img src="./img/x_icon.png" alt="公式X"></figure>
+
+    </section>
+  </main>
+
+  <footer>
+    <!-- お問い合わせ -->
+    <section class="contact" id="contact">
+      <h2>お問い合わせ</h2>
+      <form action="" method="post">
+        <dl class="contact_form">
+          <dt><label for="name">お名前<span class="red">*</span></label></dt>
+          <dd><input type="text" name="name" id="name" placeholder="例）山田太郎"></dd>
+          <dt><label for="email">メールアドレス<span class="red">*</span></label></dt>
+          <dd><input type="email" name="email" id="email" placeholder="例）sample@example.com"></dd>
+          <dt><label for="tel">電話番号</label></dt>
+          <dd><input type="tel" name="tel" id="tel" placeholder="例）090-1234-5678"></dd>
+          <dt><label for="message">お問い合わせ内容<span class="red">*</span></label></dt>
+          <dd><textarea name="message" id="message" placeholder="お問い合わせ内容をご記入ください"></textarea></dd>
+        </dl>
+      </form>
+
+      <!-- アクセス -->
+      <div class="access" id="access">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d789.6336521772297!2d139.36984917339802!3d35.68510482019864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e1e47a10f0d5%3A0x349765c12fd5e18c!2z6auY54Cs!5e0!3m2!1sja!2sjp!4v1791600479576!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="address">
+          <h3>おにぎり屋ひとにぎり</h3>
+          <p>〒000-0000</p>
+          <p>東京都○○区○○1-2-3</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- フッターリスト -->
+    <section>
+      <ul class="footer_list">
+        <li class="footer_list_item"><a href="#">企業情報</a></li>
+        <li class="footer_list_item"><a href="#">採用情報</a></li>
+        <li class="footer_list_item"><a href="#">当店へのお問い合わせ</a></li>
+      </ul>
+    </section>
+    <!-- コピーライト -->
+    <section class="copyright">
+      <p>©Hitonigiri CO.Ltd.20XX</p>  
+    </section>
+
+    <!-- ハンバーガーメニュー -->
+    <nav>
+      <ul class="hamburger_nav" id="hamburger_nav">
+        <li class="hamburger_nav_item"><a href="#index.html">TOP</a></li>
+        <li class="hamburger_nav_item"><a href="#concept">こだわり</a></li>
+        <li class="hamburger_nav_item"><a href="#campaign">キャンペーン</a></li>
+        <li class="hamburger_nav_item"><a href="#contact">お問い合わせ</a></li>
+        <li class="hamburger_nav_item"><a href="#access">店舗情報</a></li>
+      </ul>
+      <div class="hamburger_btn" id="hamburger_btn">
+        <span class="hamburger_bar"></span>
+        <span class="hamburger_bar"></span>
+        <span class="hamburger_bar"></span>
+      </div>
+    </nav>
+
+  </footer>
+  <script src="./js/index.js"></script>
+</body>
+</html>
